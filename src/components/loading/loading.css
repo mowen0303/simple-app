@@ -1,0 +1,37 @@
+@keyframes loading {
+    0% {
+        text-indent: 60px;
+    }
+    50% {
+        text-indent: 80px;
+    }
+    100% {
+        text-indent: 60px;
+    }
+}
+
+.loading-box {
+    overflow: hidden;
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    top:0;
+    background: #333;
+    line-height: 40px;
+    border-radius:0 0 10px 10px;
+    padding-bottom: 4px;
+    color: #fff;
+    transform: translateX(-50%);
+    animation-name: loading;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    opacity: 1;
+    height: 40px;
+    transition-duration: 0.3s;
+}
+
+.loading-box.hidden {
+    height: 0;
+    opacity: 0;
+}
